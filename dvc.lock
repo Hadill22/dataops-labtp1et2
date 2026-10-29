@@ -1,0 +1,24 @@
+schema: '2.0'
+stages:
+  report:
+    cmd: python run_pipeline.py data/raw/orders_day1.csv
+    deps:
+    - path: data/raw
+      hash: md5
+      md5: d1e5d5d333e4776c9288394ba3a37ea8.dir
+      size: 2350
+      nfiles: 3
+    - path: pipeline
+      hash: md5
+      md5: 3ab48a7ba84a3be6437badadb5a965fd.dir
+      size: 8626
+      nfiles: 10
+    - path: run_pipeline.py
+      hash: md5
+      md5: 8fd7b91764d7395323721e99674af244
+      size: 1345
+    outs:
+    - path: data/output/revenue_by_country.csv
+      hash: md5
+      md5: 6206f700d0ec07024fda48e213cdbd49
+      size: 93
